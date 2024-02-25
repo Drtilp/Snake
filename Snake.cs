@@ -108,7 +108,8 @@ namespace Snake
 
         private bool CheckCollisionWithBerry(int[] berryPosition)
         {
-            return berryPosition[0] == headOfSnake.xPosition && headOfSnake.yPosition == berryPosition[1];
+            return berryPosition[0] == headOfSnake.xPosition 
+                && headOfSnake.yPosition == berryPosition[1];
         }
         
         private bool CheckContactWithSelf()
