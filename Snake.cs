@@ -115,7 +115,8 @@ namespace Snake
         {
             for (int i = 0; i < snakeXPosition.Count(); i++)
             {
-                if (snakeXPosition[i] == headOfSnake.xPosition && snakeYPosition[i] == headOfSnake.yPosition)
+                if (snakeXPosition[i] == headOfSnake.xPosition 
+                    && snakeYPosition[i] == headOfSnake.yPosition)
                 {
                     return true;
                 }
@@ -125,7 +126,10 @@ namespace Snake
 
         private bool CheckCollisionWithWall()
         {
-            return headOfSnake.xPosition == screenwidth - 1 || headOfSnake.xPosition == 0 || headOfSnake.yPosition == screenheight - 1 || headOfSnake.yPosition == 0;
+            return headOfSnake.xPosition == screenwidth - 1 ||
+                headOfSnake.xPosition == 0 ||
+                headOfSnake.yPosition == screenheight - 1 ||
+                headOfSnake.yPosition == 0;
         }
 
         private void ProcessUserKeyInput()
